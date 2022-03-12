@@ -6,11 +6,21 @@
   <packaging>jar</packaging>
   <version>1.0</version>
   <name>my-app</name>
-  <url>http://maven.apache.org</url>
+  <!--url>http://maven.apache.org</url-->
     <properties>
      <maven.compiler.source>1.8</maven.compiler.source>
      <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
+    <repositories>
+      <repository>
+      <id>mainrepo</id>
+      <url>http://maven.apache.org</url>
+    </repository>
+    <repository>
+      <id>maven-public</id>
+      <url>http://ec2-13-233-131-210.ap-south-1.compute.amazonaws.com:8081/repository/maven-public/</url>
+    </repository>
+  </repositories>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
