@@ -12,7 +12,7 @@ pipeline {
                 cleanWs()
                 sayHello 'jenkins'
                 git branch: 'master', url: 'https://github.com/vytec-bs/myapp.git'                
-                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                sh "mvn -Dmaven.test.failure.ignore=true clean package org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=vytec-bs_myapp"
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
 
