@@ -1,8 +1,4 @@
-def sayHello(String name) {
-  echo "Hello, ${name}."
-  echo "Hello, ${name}."
-}
-
+@Library('pipeline-library-demo')_
 pipeline {
     agent {label 'maven-label'}
 
