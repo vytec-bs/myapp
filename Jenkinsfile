@@ -1,4 +1,4 @@
-def sayHello(String name = 'human') {
+def sayHello(String name) {
   echo "Hello, ${name}."
   echo "Hello, ${name}."
 }
