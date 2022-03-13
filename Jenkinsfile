@@ -14,7 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 cleanWs()
-                sayHello
+                sayHello 'jenkins'
                 git branch: 'master', url: 'https://github.com/vytec-bs/myapp.git'                
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
